@@ -135,7 +135,7 @@ nav {
     padding: 5px 15px;
     margin: 0px 10px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
@@ -175,7 +175,7 @@ nav {
 }
 
 .services-content {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 3fr 2fr;
     grid-gap: 40px;
 }
 
@@ -184,9 +184,17 @@ nav {
     color: #fff;
     padding: 10px 20px;
 }
+
+.services__header-1 {
+    padding:10px 0 20px 0;
+}
+
+.services-info__btn {
+    margin-top: 20px;
+}
 .services__form {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     background-color: #fff;
     padding: 10px;
@@ -308,7 +316,7 @@ nav {
     padding-top: 40px;
 }
 .download-content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-items: center;
     justify-content: center;
 }
@@ -317,10 +325,15 @@ nav {
     align-self: center;
 }
 
+.download-app-info__header {
+    padding-bottom: 20px;
+}
+
 .download-app__app-btn {
-    width: 180px;
-    padding-top: 40px;
-    padding-right: 10px;
+    width: 100%;
+    max-width: 180px;
+    margin-top: 40px;
+    margin-right: 10px;
 }
 
 .download-app__app-image {
@@ -337,7 +350,7 @@ nav {
 
 .testimonials-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     justify-items: center;
     grid-gap: 40px;
@@ -383,7 +396,7 @@ nav {
 
 .main-footer {
     background-image: url('../img/background-footer.jpg');
-
+    padding: 40px 0;
 }
 
 .footer-content {
@@ -443,4 +456,80 @@ nav {
 }
 .address-info__item {
     margin: 20px 0;
+}
+
+
+@media (max-width: 950px) {
+    h1 {
+        font-size: calc(var(--h1) - 10px);
+    }
+    h2 {
+        font-size: calc(var(--h2) - 10px);        
+    }
+    h3 {
+        font-size: calc(var(--h3) - 10px);        
+    }
+    h4 {
+        font-size: calc(var(--h4) - 10px);        
+    }
+    h5 {
+        font-size: calc(var(--h5) - 3px);        
+    }
+    .navbar {
+        display: none;
+    }
+    .contact__car-image {
+        transform: translate(-20%,15%);
+        width: 60vw;
+    }
+    .features-list {
+        padding: 20px 0;
+    
+    }
+    .content {
+        width: 90%;
+    }
+    .features-list,
+    .tariffs_prices,
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .download-app__app-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .download-app__info {
+        padding-top: 20px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .testimonials-content {
+        grid-gap: 0;
+        padding: 0;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .services-content {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact__title {
+        font-size: 7vw;
+    }
+    .contact__phone {
+        font-size: 11vw;
+    }
+}
+
+@media (max-width: 569px) {
+    .contact-us__phone {
+        font-size: 11vw;
+    }
 }
