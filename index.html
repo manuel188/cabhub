@@ -11,11 +11,20 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <div class="logo">
+                <div class="nav__menu-icon" onclick="toggleMenu();">
+                    <div class="menu-icon__line"></div>
+                    <div class="menu-icon__line"></div>
+                    <div class="menu-icon__line"></div>
+                </div>
                 <img class="logo__image" src="img/logo.png" alt="">
             </div>
             <ul class="navbar">
+                <div class="nav__menu-icon menu-icon--right" onclick="toggleMenu();">
+                    <div class="menu-icon__line line--left"></div>
+                    <div class="menu-icon__line line--right"></div>
+                </div>
                 <li class="navbar__item navbar__item--selected">Home</li>
                 <li class="navbar__item">About</li>
                 <li class="navbar__item">Features</li>
@@ -227,5 +236,14 @@
                 </div>
         </div>
     </footer>
+    <script>
+
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            const isMenuOpen = navbar.classList.contains('navbar--show');
+
+            isMenuOpen ? navbar.classList.remove('navbar--show') : navbar.classList.add('navbar--show');
+        }
+    </script>
 </body>
 </html>
