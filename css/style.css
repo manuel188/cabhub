@@ -406,10 +406,14 @@ header {
     }
     .logo {
         padding-top: 10px;
+        padding-bottom: 12px;
         width: 100%;
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
+        position: fixed;
+        background: #000000;
+        z-index: 1;
     }
     .logo__image {
         width: 120px;
@@ -466,6 +470,9 @@ header {
     }
     .navbar__item:hover {
         background-color: #000;
+    }
+    .contact {
+        padding-top: 80px;
     }
     .contact__car-image {
         transform: translate(-20%,15%);
